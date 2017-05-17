@@ -49,8 +49,8 @@
             url: 'https://vpvitterdevconvpn.voith.net/api/bp/lookups',
 			username: "EURO1\svijay",
             password: "Voith$2341988",
-            contentType: "text",
-            dataType: "text",
+            contentType: "json",
+            dataType: "json",
             type: "GET",
             success: function(data) {
                 console.log("Member registered");
