@@ -51,8 +51,10 @@
             contentType: "json",
             dataType: "json",
             type: "GET",
+			xhrFields: {
+				withCredentials: true
+			},
 			beforeSend: function (xhr){ 
-				xhr.withCredentials = true;
 				xhr.setRequestHeader('Authorization', "Basic " + btoa("svijay" + ":" + "Voith$2341988")); 
 			},
             success: function(data) {
