@@ -52,7 +52,8 @@
             dataType: "json",
             type: "GET",
 			beforeSend: function (xhr){ 
-				xhr.setRequestHeader('Authorization', "Basic " + btoa(escape("svijay" + ":" + "Voith$2341988"))); 
+				xhr.withCredentials = true;
+				xhr.setRequestHeader('Authorization', "Basic " + btoa("svijay" + ":" + "Voith$2341988")); 
 			},
             success: function(data) {
                 console.log("Member registered");
