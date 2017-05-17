@@ -47,11 +47,16 @@
             $("#connectionRefreshButton").click(function(event) {
 				$.ajax({
             url: 'https://vpvitterdevconvpn.voith.net/api/bp/lookups',
-			
-            xhrFields: {
-				withCredentials: true
-			},
-			headers: {
+			dataType: "jsonp",
+			callback: function(data) {
+                alert("Callback" + data);
+            },
+			jsonpCallback: function(data) {
+                alert("JsonpCallback" + data);
+            },
+			type: "GET",
+			crossDomain: true,
+            headers: {
 				'Authorization': 'Basic ' + btoa("svijay" + ":" + "Voith$2341988")
 			},
             success: function(data) {
