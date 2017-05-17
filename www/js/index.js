@@ -52,7 +52,7 @@
             dataType: "json",
             type: "GET",
 			headers: {
-				"Authorization": "Basic " + btoa(encodeURIComponent(escape("svijay" + ":" + "Voith$2341988")))
+				"Authorization": "Basic " + btoa(escape("svijay" + ":" + "Voith$2341988"))
 			},
 			
             success: function(data) {
