@@ -57,7 +57,7 @@
 			type: "GET",
 			crossDomain: true,
             headers: {
-				'Authorization': 'Basic ' + btoa("svijay" + ":" + "Voith$2341988")
+				'Authorization': 'Basic ' + btoa("Euro1/svijay" + ":" + "Voith$2341988")
 			},
             success: function(data) {
                 console.log("Member registered");
