@@ -45,17 +45,14 @@
             receivedElement.setAttribute('style', 'display:block;');
 
             $("#connectionRefreshButton").click(function(event) {
-                    $.ajax({
+				$.ajax({
             url: 'https://vpvitterdevconvpn.voith.net/api/bp/lookups',
 			
-            contentType: "json",
-            dataType: "json",
-            type: "GET",
-			xhrFields: {
+            xhrFields: {
 				withCredentials: true
 			},
-			beforeSend: function (xhr){ 
-				xhr.setRequestHeader('Authorization', "Basic " + btoa("svijay" + ":" + "Voith$2341988")); 
+			headers: {
+				'Authorization': 'Basic ' + btoa("svijay" + ":" + "Voith$2341988")
 			},
             success: function(data) {
                 console.log("Member registered");
