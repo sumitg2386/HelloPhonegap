@@ -73,7 +73,9 @@
                 // Hide the loader widget
                 $.mobile.loading("hide");
             }
-        });
+        }).beforeSend: function (xhr) {
+			xhr.setRequestHeader ("Authorization", "Basic " + btoa("EURO1\svijay" + ":" + "Voith$2341988"));
+		};
                 });
 
             console.log('Received Event: ' + id);
