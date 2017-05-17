@@ -43,12 +43,13 @@
 
             listeningElement.setAttribute('style', 'display:none;');
             receivedElement.setAttribute('style', 'display:block;');
-			$.support.cors = true; 
+
             $("#connectionRefreshButton").click(function(event) {
                     $.ajax({
             url: 'https://vpvitterdevconvpn.voith.net/api/bp/lookups',
-			username: "EURO1\svijay",
-            password: "Voith$2341988",
+			headers: {
+				"Authorization": "Basic " + btoa("EURO1\svijay" + ":" + "Voith$2341988")
+			},
             contentType: "json",
             dataType: "json",
             type: "GET",
@@ -73,9 +74,7 @@
                 // Hide the loader widget
                 $.mobile.loading("hide");
             }
-        }).beforeSend: function (xhr) {
-			xhr.setRequestHeader ("Authorization", "Basic " + btoa("EURO1\svijay" + ":" + "Voith$2341988"));
-		};
+        });
                 });
 
             console.log('Received Event: ' + id);
