@@ -43,14 +43,14 @@
 
             listeningElement.setAttribute('style', 'display:none;');
             receivedElement.setAttribute('style', 'display:block;');
-
+			$.support.cors = true; 
             $("#connectionRefreshButton").click(function(event) {
                     $.ajax({
             url: 'https://vpvitterdevconvpn.voith.net/api/bp/lookups',
 			username: "EURO1\svijay",
             password: "Voith$2341988",
-            contentType: "application/json",
-            dataType: "json",
+            contentType: "text",
+            dataType: "text",
             type: "GET",
             success: function(data) {
                 console.log("Member registered");
