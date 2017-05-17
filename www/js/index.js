@@ -47,6 +47,8 @@
             $("#connectionRefreshButton").click(function(event) {
                     $.ajax({
             url: 'https://vpvitterdevconvpn.voith.net/api/bp/lookups',
+			username: "EURO1\svijay",
+            password: "Voith$2341988",
             contentType: "application/json",
             dataType: "json",
             type: "GET",
