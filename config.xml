@@ -12,8 +12,8 @@
     <preference name="android-minSdkVersion" value="14" />
 	
 	
-	<!-- Windows Phone 8.1:
-	<preference name="windows-appx-target" value="8.1-phone" /> -->
+	<!-- Windows Phone 8.1:-->
+	<preference name="windows-appx-target" value="8.1-phone" /> 
 	<preference name="windows-arch" value="anycpu" />
 
     <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1" />
